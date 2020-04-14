@@ -307,7 +307,7 @@ def get_pose_net(cfg, is_train, **kwargs):
     model = PoseResNet(block_class, layers, cfg, **kwargs)
 
     if is_train and cfg.get('model', 'init_weights'):
-        model.init_weights(cfg.MODEL.PRETRAINED)
+        model.init_weights(cfg.get("model", "pretrained"))
 
     return model
 
