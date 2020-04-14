@@ -3,7 +3,6 @@
 # Author: Donny You(youansheng@gmail.com)
 # Select Pose Model for pose detection.
 
-from model.pose.nets.open_pose import OpenPose
 from model.pose.nets.hr_pose import get_pose_net
 
 from lib.core.loss import LossFactory
