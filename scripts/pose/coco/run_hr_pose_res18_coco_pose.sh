@@ -9,7 +9,7 @@ cd ${WORK_DIR}
 
 MODEL_NAME="hrpose"
 CHECKPOINTS_NAME="hrpose_res18_coco_pose"$2
-CONFIG_FILE='configs/hr_pose_res50_coco_pose.conf'
+CONFIG_FILE='configs/coco/hr_pose_res50_coco_pose.conf'
 
 LOG_DIR="./log/pose/coco/"
 LOG_FILE="${LOG_DIR}${CHECKPOINTS_NAME}.log"
