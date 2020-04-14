@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # check the enviroment info
-nvidia-smi
 PYTHON="python"
 
 WORK_DIR=$(cd $(dirname $0)/../../../;pwd)
