@@ -44,7 +44,7 @@ class PoseEstimator(object):
             "valid_global_steps": 0,
         }
         dump_input = torch.rand((1, 3, self.configer.get("data", "input_size"),
-                                 self.configer.get("data", "input_size")))
+                                 self.configer.get("data", "input_size"))).cuda()
         self.writer_dict["writer"].add_graph(self.pose_net, (dump_input, ))
 
         self.optimizer = self.get_optimizer()
