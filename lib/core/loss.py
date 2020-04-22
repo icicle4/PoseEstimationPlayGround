@@ -143,7 +143,7 @@ class LossFactory(nn.Module):
         if cfg.get("loss", "with_heatmaps_loss"):
             self.heatmaps_loss = HeatmapLoss()
             self.heatmaps_loss_factor = cfg.get("loss", "heatmap_loss_factor")
-        
+
         if cfg.get("loss", "with_ae_loss"):
             self.ae_loss = AELoss(cfg.get("loss", "ae_loss_type"))
             self.push_loss_factor = cfg.get("loss", "push_loss_factor")
