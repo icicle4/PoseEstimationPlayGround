@@ -63,7 +63,7 @@ def make_dataloader(cfg, is_train=True, distributed=False):
     else:
         images_per_gpu = cfg.get("train", "images_per_gpu")
         shuffle = False
-    images_per_batch = images_per_gpu * len(cfg.GPUS)
+    images_per_batch = images_per_gpu * len(cfg.get("gpus"))
     dataset = build_dataset(cfg, is_train)
 
     if is_train and distributed:
