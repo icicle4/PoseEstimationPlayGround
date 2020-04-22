@@ -86,7 +86,9 @@ class PoseEstimator(object):
         push_loss_meter = utils.AverageMeter()
         pull_loss_meter = utils.AverageMeter()
 
-        for i, (images, heatmaps, masks, joints) in enumerate(self.train_loader):
+        for i, inputs in enumerate(self.train_loader):
+            inputs = [inp.cuda() for inp in inputs]
+            images, heatmaps, masks, joints = inputs
             self.data_time.update(time.time() - start_time)
 
             outputs = self.pose_net(images)
